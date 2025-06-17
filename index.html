@@ -1,0 +1,490 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Inversión Inmobiliaria en Miami, Florida - 15% Rentabilidad Anual</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+</head>
+<body>
+    <!-- Particles Background -->
+    <div class="particles-container">
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+    </div>
+
+    <!-- Hero Section with Miami background image -->
+    <section class="hero">
+        <div class="hero-overlay"></div>
+        <div class="hero-container" style="max-width: 1200px;">
+            <div class="hero-content">
+                <div class="hero-spacer" data-aos="fade-down"></div>
+                <h1 class="hero-title" data-aos="fade-up" data-aos-delay="200">
+                    <span class="title-line">EL ATRACTIVO DEL</span>
+                    <div class="animated-underline"></div>
+                </h1>
+                <h2 class="hero-subtitle" data-aos="fade-up" data-aos-delay="400">
+                    <span class="gradient-text">SUR DE FLORIDA</span>
+                </h2>
+                <!-- New subtitle below the main title -->
+                <p class="hero-description" style="margin-top: -10px; font-style: italic; font-weight: 600;" data-aos="fade-up" data-aos-delay="450">
+                    Invierte directamente con el desarrollador
+                </p>
+                <p class="hero-description" data-aos="fade-up" data-aos-delay="600">
+                    Únete a los inversionistas inteligentes que están generando <strong>15% de rentabilidad anual</strong>
+                    en el mercado inmobiliario más próspero de Estados Unidos. Oportunidades exclusivas con garantías reales.
+                </p>
+                
+                <div class="hero-stats reveal-fade" data-aos="fade-up" data-aos-delay="800">
+                    <div class="stat-item stagger-item">
+                        <div class="stat-number counter">15%</div>
+                        <div class="stat-label">Rentabilidad Anual</div>
+                    </div>
+                    <div class="stat-item stagger-item">
+                        <div class="stat-number counter">500+</div>
+                        <div class="stat-label">Inversionistas Satisfechos</div>
+                    </div>
+                    <div class="stat-item stagger-item">
+                        <div class="stat-number counter">€50M+</div>
+                        <div class="stat-label">Invertidos con Éxito</div>
+                    </div>
+                </div>
+                
+                <div class="trust-indicators" data-aos="fade-up" data-aos-delay="1200">
+                    <div class="trust-item">
+                        <i class="fas fa-shield-alt"></i>
+                        <span>100% Seguro</span>
+                    </div>
+                    <div class="trust-item">
+                        <i class="fas fa-file-contract"></i>
+                        <span>Contratos Legales</span>
+                    </div>
+                    <div class="trust-item">
+                        <i class="fas fa-chart-line"></i>
+                        <span>ROI Garantizado</span>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Action Cards Container - Made smaller -->
+            <div class="action-cards-container" data-aos="fade-left" data-aos-delay="800">
+                <!-- Zoom Card -->
+                <div class="action-card zoom-card compact">
+                    <div class="card-icon">
+                        <i class="fas fa-video"></i>
+                    </div>
+                    <div class="card-content">
+                        <h3>Sesión Exclusiva en Vivo</h3>
+                        <p>Únete a nuestra presentación especial sobre oportunidades de inversión en Miami</p>
+                        <div class="meeting-details">
+                            <div class="detail-item">
+                                <i class="fas fa-calendar-alt"></i>
+                                <span>8 de Julio de 2025</span>
+                            </div>
+                            <div class="detail-item">
+                                <i class="fas fa-clock"></i>
+                                <span>19:00 España / 13:00 Miami</span>
+                            </div>
+                        </div>
+                    </div>
+                    <button class="action-btn zoom-btn" onclick="joinZoom()">
+                        <span>Únete al Zoom Aquí</span>
+                        <i class="fas fa-external-link-alt"></i>
+                    </button>
+                </div>
+
+                <!-- PDF Download Card - Simplified -->
+                <div class="action-card pdf-card compact">
+                    <div class="card-icon">
+                        <i class="fas fa-file-pdf"></i>
+                    </div>
+                    <div class="card-content">
+                        <h3>Guía Completa de Inversión</h3>
+                        <p>Descarga nuestra guía exclusiva con todo lo que necesitas saber sobre inversión inmobiliaria en Miami</p>
+                    </div>
+                    <button class="action-btn pdf-btn" onclick="downloadPDF()">
+                        <span>Descarga este PDF Gratis de Regalo</span>
+                        <i class="fas fa-download"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Countdown Section -->
+    <section class="countdown-section">
+        <div class="container">
+            <div class="countdown-content">
+                <div class="countdown-header">
+                    <div class="countdown-badge">
+                        <i class="fas fa-clock"></i>
+                        <span>Sesión Exclusiva</span>
+                    </div>
+                    <h3>¡No te pierdas esta oportunidad única!</h3>
+                    <p>Faltan solo:</p>
+                </div>
+                
+                <div class="countdown-timer" id="countdown">
+                    <div class="countdown-item">
+                        <div class="countdown-number" id="days">00</div>
+                        <div class="countdown-label">Días</div>
+                    </div>
+                    <div class="countdown-separator">:</div>
+                    <div class="countdown-item">
+                        <div class="countdown-number" id="hours">00</div>
+                        <div class="countdown-label">Horas</div>
+                    </div>
+                    <div class="countdown-separator">:</div>
+                    <div class="countdown-item">
+                        <div class="countdown-number" id="minutes">00</div>
+                        <div class="countdown-label">Minutos</div>
+                    </div>
+                    <div class="countdown-separator">:</div>
+                    <div class="countdown-item">
+                        <div class="countdown-number" id="seconds">00</div>
+                        <div class="countdown-label">Segundos</div>
+                    </div>
+                </div>
+
+                <div class="countdown-cta">
+                    <p>8 de Julio 2025 • 19:00 España • 13:00 Miami</p>
+                    <button class="countdown-btn" onclick="joinZoom()">
+                        <i class="fas fa-video"></i>
+                        <span>Reservar mi lugar</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ROI Section with reduced top padding -->
+    <section class="roi-section" style="background: transparent; padding-top: 20px; padding-bottom: 40px; margin-top: 0;">
+        <div class="container">
+            <div class="roi-content">
+                <div class="roi-text reveal-left" data-aos="fade-right">
+                    <div class="roi-badge">📈 Retorno de Inversión</div>
+                    <h3>¿Qué Retorno puedes esperar?</h3>
+                    <div class="roi-percentage">
+                        <span class="percentage-number animated-percentage" id="percentage-counter">15</span>
+                        <span class="percentage-symbol">%</span>
+                    </div>
+                    <p class="roi-description">DE RENTABILIDAD ANUAL PROMEDIO</p>
+                    <p class="roi-subtitle">Una oportunidad que muy pocos tienen acceso</p>
+
+                    <div class="roi-features">
+                        <div class="feature-item">
+                            <i class="fas fa-calendar-alt"></i>
+                            <span>Pagos trimestrales garantizados</span>
+                        </div>
+                        <div class="feature-item highlight-feature">
+                            <i class="fas fa-percentage"></i>
+                            <span>3.75% retorno trimestral</span>
+                        </div>
+                        <div class="feature-item">
+                            <i class="fas fa-trending-up"></i>
+                            <span>Apreciación del capital</span>
+                        </div>
+                        <div class="feature-item">
+                            <i class="fas fa-handshake"></i>
+                            <span>Contratos respaldados legalmente</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="roi-visual reveal-right" data-aos="fade-left">
+                    <div class="roi-circle-container">
+                        <div class="roi-circle">
+                            <div class="roi-inner">
+                                <span class="roi-label">ROI</span>
+                                <span class="roi-value">15%</span>
+                            </div>
+                            <div class="currency-symbols">
+                                <span class="currency">€</span>
+                                <span class="currency">€</span>
+                                <span class="currency">€</span>
+                                <span class="currency">€</span>
+                                <span class="currency">€</span>
+                                <span class="currency">€</span>
+                            </div>
+                        </div>
+                        <div class="roi-orbits">
+                            <div class="orbit orbit-1"></div>
+                            <div class="orbit orbit-2"></div>
+                            <div class="orbit orbit-3"></div>
+                        </div>
+                    </div>
+
+                    <div class="investment-calculator">
+                        <h4>Calculadora Rápida</h4>
+                        <div class="calc-row">
+                            <span>Inversión: €250,000</span>
+                            <span>Retorno Anual: €37,500</span>
+                        </div>
+                        <div class="calc-row">
+                            <span>Inversión: €500,000</span>
+                            <span>Retorno Anual: €75,000</span>
+                        </div>
+                        <div class="calc-row">
+                            <span>Inversión: €1,000,000</span>
+                            <span>Retorno Anual: €150,000</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Modified CTA Button below second section -->
+        <div class="cta-button-container" style="padding: 20px 0 0 0; text-align: center;">
+            <button 
+              id="openFormBtnBelowSecond" 
+              class="cta-button" 
+              onclick="joinZoom()"
+              aria-label="Regístrate Aquí"
+            >
+                <span>Regístrate Aquí</span>
+                <i class="fas fa-arrow-right"></i>
+            </button>
+        </div>
+    </section>
+
+    <!-- Questions Section -->
+    <section id="questions" class="questions-section">
+        <div class="container">
+            <div class="section-header reveal-fade" data-aos="fade-up">
+                <div class="section-badge">💼 Inversión Profesional</div>
+                <h2 class="section-title">INVERSIÓN INMOBILIARIA</h2>
+                <h3 class="section-subtitle">EN MIAMI, FLORIDA, USA</h3>
+                <p class="section-description">
+                    Descubre por qué Miami se ha convertido en el destino #1 para inversionistas internacionales
+                    que buscan rentabilidad, seguridad y crecimiento a largo plazo.
+                </p>
+
+                <div class="logos-container">
+                    <div class="logo-item" data-aos="zoom-in" data-aos-delay="100">
+                        <img src="JuanHaro-com2.png" alt="JuanHaro.com" class="partner-logo" />
+                    </div>
+                    <div class="logo-item" data-aos="zoom-in" data-aos-delay="200">
+                        <img src="logo-club-blanco.png" alt="Club" class="partner-logo" />
+                    </div>
+                    <div class="logo-item" data-aos="zoom-in" data-aos-delay="300">
+                        <img src="/placeholder.svg?height=50&width=200" alt="TEO" class="partner-logo" />
+                    </div>
+                </div>
+            </div>
+
+            <div class="questions-title reveal-scale" data-aos="fade-up">
+                <h3>Las 3 Preguntas que todo Inversionista debe hacerse</h3>
+                <p>Antes de tomar cualquier decisión de inversión, es crucial entender estos fundamentos</p>
+            </div>
+
+            <div class="questions-grid">
+                <div class="question-card stagger-item" data-aos="fade-up" data-aos-delay="100">
+                    <div class="card-number">01</div>
+                    <div class="card-icon">
+                        <i class="fas fa-bullseye"></i>
+                    </div>
+                    <h4>¿Qué obtienes?</h4>
+                    <div class="highlight-box">
+                        <strong>15% de rentabilidad anual</strong>
+                    </div>
+                    <p>
+                        Una oportunidad de inversión inmobiliaria exclusiva que muy pocos tienen acceso.
+                        Proyectos seleccionados con desarrolladores de primer nivel en las mejores zonas de Miami.
+                    </p>
+                    <ul class="benefits-list">
+                        <li><i class="fas fa-check"></i> Rentabilidad superior al mercado</li>
+                        <li><i class="fas fa-check"></i> Inversión mínima €250,000</li>
+                        <li><i class="fas fa-check"></i> Contratos transparentes</li>
+                    </ul>
+                </div>
+
+                <div class="question-card stagger-item" data-aos="fade-up" data-aos-delay="200">
+                    <div class="card-number">02</div>
+                    <div class="card-icon">
+                        <i class="fas fa-shield-alt"></i>
+                    </div>
+                    <h4>¿Por qué Florida?</h4>
+                    <div class="highlight-box">
+                        <strong>Protege y multiplica tu patrimonio</strong>
+                    </div>
+                    <p>
+                        Florida ofrece estabilidad política, crecimiento económico constante y un mercado inmobiliario
+                        resiliente. Es tu responsabilidad hacer crecer lo que tanto te ha costado construir.
+                    </p>
+                    <ul class="benefits-list">
+                        <li><i class="fas fa-check"></i> Mercado estable y en crecimiento</li>
+                        <li><i class="fas fa-check"></i> Protección contra inflación</li>
+                        <li><i class="fas fa-check"></i> Diversificación geográfica</li>
+                    </ul>
+                </div>
+
+                <div class="question-card stagger-item" data-aos="fade-up" data-aos-delay="300">
+                    <div class="card-number">03</div>
+                    <div class="card-icon">
+                        <i class="fas fa-route"></i>
+                    </div>
+                    <h4>¿Cómo funciona?</h4>
+                    <div class="highlight-box">
+                        <strong>Te abrimos el camino</strong>
+                    </div>
+                    <p>
+                        Invierte directamente con desarrolladores establecidos en proyectos pre-construcción.
+                        Acceso exclusivo al capital de desarrollos inmobiliarios con máxima transparencia.
+                    </p>
+                    <ul class="benefits-list">
+                        <li><i class="fas fa-check"></i> 3 garantías para tu tranquilidad</li>
+                        <li><i class="fas fa-check"></i> Acompañamiento personalizado</li>
+                        <li><i class="fas fa-check"></i> Proceso 100% legal y transparente</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer with original layout -->
+<footer class="footer">
+    <div class="container">
+        <div class="footer-content">
+            <!-- REALTY WORLD Column -->
+            <div class="footer-column">
+                <div class="company-info">
+                    <div class="company-logo-container">
+                        <div class="logo-circle">
+                            <span class="logo-text">RW</span>
+                        </div>
+                        <div class="company-details">
+                            <h4>TEO ORTEGA</h4>
+                            <p>Alquimista inmobiliario</p>
+                            <small>Broker inmobiliario</small>
+                        </div>
+                    </div>
+                    <div class="social-icons">
+                        <div class="social-row">
+                            <a href="https://facebook.com" target="_blank" class="social-icon facebook">
+                                <i class="fab fa-facebook-f"></i>
+                            </a>
+                            <a href="https://instagram.com" target="_blank" class="social-icon instagram">
+                                <i class="fab fa-instagram"></i>
+                            </a>
+                            <a href="https://youtube.com" target="_blank" class="social-icon youtube">
+                                <i class="fab fa-youtube"></i>
+                            </a>
+                            <a href="https://linkedin.com" target="_blank" class="social-icon linkedin">
+                                <i class="fab fa-linkedin-in"></i>
+                            </a>
+                            <a href="https://wa.me/17863429400" target="_blank" class="social-icon whatsapp">
+                                <i class="fab fa-whatsapp"></i>
+                            </a>
+                        </div>
+                        <div class="social-row">
+                            <a href="mailto:info@circleclub.com" class="social-icon email">
+                                <i class="fas fa-envelope"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- JuanHaro.com Column -->
+            <div class="footer-column">
+                <div class="company-info">
+                    <div class="company-logo-container">
+                        <div class="logo-circle">
+                            <span class="logo-text">JH</span>
+                        </div>
+                        <div class="company-details">
+                            <h4>JuanHaro.com</h4>
+                            <p>Dinero, Inversiones e Inmuebles</p>
+                            <small>Experto en Inversiones</small>
+                        </div>
+                    </div>
+                    <div class="social-icons">
+                        <div class="social-row">
+                            <a href="https://facebook.com" target="_blank" class="social-icon facebook">
+                                <i class="fab fa-facebook-f"></i>
+                            </a>
+                            <a href="https://instagram.com" target="_blank" class="social-icon instagram">
+                                <i class="fab fa-instagram"></i>
+                            </a>
+                            <a href="https://youtube.com" target="_blank" class="social-icon youtube">
+                                <i class="fab fa-youtube"></i>
+                            </a>
+                            <a href="https://linkedin.com" target="_blank" class="social-icon linkedin">
+                                <i class="fab fa-linkedin-in"></i>
+                            </a>
+                            <a href="https://wa.me/34640543184" target="_blank" class="social-icon whatsapp">
+                                <i class="fab fa-whatsapp"></i>
+                            </a>
+                        </div>
+                        <div class="social-row">
+                            <a href="mailto:juanharo@juanharo.com" class="social-icon email">
+                                <i class="fas fa-envelope"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- LA ESCUELA Column -->
+            <div class="footer-column">
+                <div class="company-info">
+                    <div class="company-logo-container">
+                        <div class="logo-circle">
+                            <span class="logo-text">EI</span>
+                        </div>
+                        <div class="company-details">
+                            <h4>LA ESCUELA</h4>
+                            <p>DE INVERSIÓN</p>
+                            <small>"Educación financiera para gente con mente"</small>
+                        </div>
+                    </div>
+                    <div class="social-icons">
+                        <div class="social-row">
+                            <a href="https://facebook.com" target="_blank" class="social-icon facebook">
+                                <i class="fab fa-facebook-f"></i>
+                            </a>
+                            <a href="https://instagram.com" target="_blank" class="social-icon instagram">
+                                <i class="fab fa-instagram"></i>
+                            </a>
+                            <a href="https://youtube.com" target="_blank" class="social-icon youtube">
+                                <i class="fab fa-youtube"></i>
+                            </a>
+                            <a href="https://linkedin.com" target="_blank" class="social-icon linkedin">
+                                <i class="fab fa-linkedin-in"></i>
+                            </a>
+                            <a href="https://wa.me/34640543184" target="_blank" class="social-icon whatsapp">
+                                <i class="fab fa-whatsapp"></i>
+                            </a>
+                        </div>
+                        <div class="social-row">
+                            <a href="mailto:club@laescueladeinversion.com" class="social-icon email">
+                                <i class="fas fa-envelope"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p>&copy; 2025 Inversión Inmobiliaria Miami. Todos los derechos reservados.</p>
+            <div class="footer-links">
+                <a href="#">Términos y Condiciones</a>
+                <a href="#">Política de Privacidad</a>
+                <a href="#">Aviso Legal</a>
+            </div>
+        </div>
+    </div>
+</footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
