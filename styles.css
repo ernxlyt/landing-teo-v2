@@ -1327,13 +1327,13 @@ body {
   margin-top: 8px;
 }
 
-/* Social Icons Grid - New Design */
+/* Social Icons Grid - 3 iconos en una fila */
 .social-icons {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: repeat(2, 1fr);
-  gap: clamp(12px, 3vw, 15px);
-  max-width: 200px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: clamp(15px, 4vw, 20px);
+  max-width: 250px;
   margin: 0 auto;
   padding: 0;
 }
@@ -1343,19 +1343,19 @@ body {
 }
 
 .social-icon {
-  width: clamp(50px, 10vw, 60px);
-  height: clamp(50px, 10vw, 60px);
-  border-radius: 16px;
+  width: clamp(55px, 12vw, 70px);
+  height: clamp(55px, 12vw, 70px);
+  border-radius: 18px;
   display: flex;
   align-items: center;
   justify-content: center;
   text-decoration: none;
   color: white;
-  font-size: clamp(1.1rem, 2.5vw, 1.4rem);
+  font-size: clamp(1.2rem, 3vw, 1.6rem);
   transition: all 0.3s ease;
   position: relative;
   overflow: hidden;
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
 }
 
 .social-icon::before {
@@ -1375,8 +1375,8 @@ body {
 }
 
 .social-icon:hover {
-  transform: translateY(-5px) scale(1.08);
-  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.4);
+  transform: translateY(-8px) scale(1.1);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
 }
 
 .social-icon.facebook {
@@ -1384,7 +1384,7 @@ body {
 }
 
 .social-icon.facebook:hover {
-  box-shadow: 0 15px 35px rgba(24, 119, 242, 0.4);
+  box-shadow: 0 20px 40px rgba(24, 119, 242, 0.5);
 }
 
 .social-icon.instagram {
@@ -1392,23 +1392,7 @@ body {
 }
 
 .social-icon.instagram:hover {
-  box-shadow: 0 15px 35px rgba(225, 48, 108, 0.4);
-}
-
-.social-icon.youtube {
-  background: linear-gradient(135deg, #ff0000, #cc0000);
-}
-
-.social-icon.youtube:hover {
-  box-shadow: 0 15px 35px rgba(255, 0, 0, 0.4);
-}
-
-.social-icon.linkedin {
-  background: linear-gradient(135deg, #0077b5, #005885);
-}
-
-.social-icon.linkedin:hover {
-  box-shadow: 0 15px 35px rgba(0, 119, 181, 0.4);
+  box-shadow: 0 20px 40px rgba(225, 48, 108, 0.5);
 }
 
 .social-icon.whatsapp {
@@ -1416,7 +1400,7 @@ body {
 }
 
 .social-icon.whatsapp:hover {
-  box-shadow: 0 15px 35px rgba(37, 211, 102, 0.4);
+  box-shadow: 0 20px 40px rgba(37, 211, 102, 0.5);
 }
 
 .social-icon.email {
@@ -1480,14 +1464,14 @@ body {
   }
 
   .social-icons {
-    max-width: 180px;
-    gap: clamp(10px, 2.5vw, 12px);
+    max-width: 220px;
+    gap: clamp(12px, 3vw, 15px);
   }
 
   .social-icon {
-    width: clamp(45px, 8vw, 50px);
-    height: clamp(45px, 8vw, 50px);
-    font-size: clamp(1rem, 2vw, 1.2rem);
+    width: clamp(50px, 10vw, 60px);
+    height: clamp(50px, 10vw, 60px);
+    font-size: clamp(1.1rem, 2.5vw, 1.4rem);
   }
 }
 
@@ -1497,15 +1481,15 @@ body {
   }
 
   .social-icons {
-    max-width: 160px;
-    gap: clamp(8px, 2vw, 10px);
+    max-width: 200px;
+    gap: clamp(10px, 2.5vw, 12px);
   }
 
   .social-icon {
-    width: clamp(40px, 7vw, 45px);
-    height: clamp(40px, 7vw, 45px);
-    font-size: clamp(0.9rem, 2vw, 1.1rem);
-    border-radius: 12px;
+    width: clamp(45px, 8vw, 55px);
+    height: clamp(45px, 8vw, 55px);
+    font-size: clamp(1rem, 2vw, 1.2rem);
+    border-radius: 14px;
   }
 
   .logo-circle {
