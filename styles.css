@@ -1066,42 +1066,52 @@ body {
 }
 
 .partner-logo {
-  height: clamp(35px, 8vw, 50px);
+  height: clamp(25px, 6vw, 35px); /* Reducido de clamp(35px, 8vw, 50px) */
   width: auto;
   filter: brightness(0) invert(1);
 }
 
-/* Special class for Teo logo - Make it larger */
+/* Special class for Teo logo - Make it much larger */
 .partner-logo.teo-logo {
-  height: clamp(50px, 12vw, 75px); /* Significantly larger than other logos */
-  transform: scale(1.2); /* Additional scaling for emphasis */
+  height: clamp(60px, 15vw, 90px); /* Aumentado de clamp(50px, 12vw, 75px) */
+  transform: scale(1.4); /* Aumentado de scale(1.2) */
   transition: all 0.3s ease;
+  filter: brightness(0) invert(1) drop-shadow(0 0 10px rgba(0, 212, 255, 0.3)); /* Añadido glow azul */
 }
 
 .partner-logo.teo-logo:hover {
-  transform: scale(1.3); /* Even larger on hover */
+  transform: scale(1.5); /* Aumentado de scale(1.3) */
+  filter: brightness(0) invert(1) drop-shadow(0 0 15px rgba(0, 212, 255, 0.5)); /* Glow más intenso en hover */
 }
 
 /* Responsive adjustments for Teo logo */
 @media (max-width: 768px) {
+  .partner-logo {
+    height: clamp(20px, 5vw, 30px); /* Reducido para móviles */
+  }
+
   .partner-logo.teo-logo {
-    height: clamp(45px, 10vw, 65px);
-    transform: scale(1.15);
+    height: clamp(55px, 12vw, 75px);
+    transform: scale(1.3);
   }
 
   .partner-logo.teo-logo:hover {
-    transform: scale(1.25);
+    transform: scale(1.4);
   }
 }
 
 @media (max-width: 480px) {
+  .partner-logo {
+    height: clamp(18px, 4vw, 25px); /* Aún más pequeños en móviles */
+  }
+
   .partner-logo.teo-logo {
-    height: clamp(40px, 9vw, 55px);
-    transform: scale(1.1);
+    height: clamp(50px, 10vw, 65px);
+    transform: scale(1.25);
   }
 
   .partner-logo.teo-logo:hover {
-    transform: scale(1.2);
+    transform: scale(1.35);
   }
 }
 
