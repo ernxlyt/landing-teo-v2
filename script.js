@@ -1,6 +1,6 @@
 // Configuration
 const ZOOM_LINK = "https://us02web.zoom.us/webinar/register/WN_bA6j5cemSfquew66LWKDmg#/registration" // Replace with your actual Zoom link
-const PDF_PATH = "Viviendas.pdf" // Replace with your actual PDF path
+const PDF_PATH = "Inversión.pdf" // Replace with your actual PDF path
 
 // Countdown functionality with CORRECTED 2025 date
 function initializeCountdown() {
@@ -242,7 +242,7 @@ function downloadPDF() {
   // Create download link
   const link = document.createElement("a")
   link.href = PDF_PATH
-  link.download = "viviendas.pdf"
+  link.download = "Inversión.pdf" // Ensure the file name is correct
   document.body.appendChild(link)
   link.click()
   document.body.removeChild(link)
@@ -271,12 +271,12 @@ function animateCounters() {
   })
 }
 
-// Función para animar el contador del 15%
+// Función para animar el contador del 15% - LIMITADO A 15%
 function animatePercentageCounter() {
   const counter = document.getElementById("percentage-counter")
   if (!counter) return
 
-  const target = 15
+  const target = 15 // MÁXIMO 15%
   const duration = 2000 // 2 segundos
   const increment = target / (duration / 16) // 60fps
   let current = 0
@@ -284,10 +284,11 @@ function animatePercentageCounter() {
   const updateCounter = () => {
     if (current < target) {
       current += increment
-      counter.textContent = Math.floor(current)
+      const displayValue = Math.min(Math.floor(current), 15) // Asegurar que no pase de 15
+      counter.textContent = displayValue
       requestAnimationFrame(updateCounter)
     } else {
-      counter.textContent = target
+      counter.textContent = 15 // Asegurar que termine en 15
     }
   }
 

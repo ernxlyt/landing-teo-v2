@@ -117,9 +117,7 @@ body {
 /* Hero Section with Miami Background */
 .hero {
   min-height: 100vh;
-  background: linear-gradient(135deg, rgba(26, 54, 93, 0.85), rgba(15, 42, 68, 0.85)),
-    url("Florida.jpg") center /
-    cover;
+  background: linear-gradient(135deg, rgba(26, 54, 93, 0.85), rgba(15, 42, 68, 0.85)), url("Florida.jpg") center / cover;
   display: flex;
   align-items: center;
   position: relative;
@@ -1073,6 +1071,40 @@ body {
   filter: brightness(0) invert(1);
 }
 
+/* Special class for Teo logo - Make it larger */
+.partner-logo.teo-logo {
+  height: clamp(50px, 12vw, 75px); /* Significantly larger than other logos */
+  transform: scale(1.2); /* Additional scaling for emphasis */
+  transition: all 0.3s ease;
+}
+
+.partner-logo.teo-logo:hover {
+  transform: scale(1.3); /* Even larger on hover */
+}
+
+/* Responsive adjustments for Teo logo */
+@media (max-width: 768px) {
+  .partner-logo.teo-logo {
+    height: clamp(45px, 10vw, 65px);
+    transform: scale(1.15);
+  }
+
+  .partner-logo.teo-logo:hover {
+    transform: scale(1.25);
+  }
+}
+
+@media (max-width: 480px) {
+  .partner-logo.teo-logo {
+    height: clamp(40px, 9vw, 55px);
+    transform: scale(1.1);
+  }
+
+  .partner-logo.teo-logo:hover {
+    transform: scale(1.2);
+  }
+}
+
 .questions-title {
   text-align: center;
   margin-bottom: clamp(40px, 8vh, 60px);
@@ -1173,11 +1205,20 @@ body {
   font-size: clamp(1rem, 3vw, 1.1rem);
 }
 
-.question-card p {
-  font-size: clamp(0.85rem, 2.5vw, 0.95rem);
-  line-height: 1.6;
-  opacity: 0.9;
+/* Estilo limpio para el texto de las preguntas */
+.question-text {
+  font-size: clamp(0.9rem, 2.5vw, 1rem);
+  line-height: 1.7;
+  color: var(--text-light);
+  opacity: 0.85;
   margin-bottom: 25px;
+  font-weight: 400;
+  letter-spacing: 0.3px;
+  text-align: left;
+}
+
+.question-card p {
+  display: none; /* Ocultar el párrafo original */
 }
 
 .benefits-list {
@@ -1908,5 +1949,163 @@ body {
     animation-duration: 0.01ms !important;
     animation-iteration-count: 1 !important;
     transition-duration: 0.01ms !important;
+  }
+}
+
+/* Question Cards - Enhanced Typography */
+.question-card h4 {
+  font-size: clamp(1.4rem, 4vw, 1.8rem); /* Aumentado de 1.1rem a 1.4rem */
+  font-weight: 800; /* Aumentado de 700 a 800 */
+  margin-bottom: 25px; /* Aumentado de 20px a 25px */
+  color: var(--text-light);
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5); /* Añadido para mejor contraste */
+  letter-spacing: 0.5px; /* Añadido para mejor legibilidad */
+}
+
+.highlight-box {
+  background: rgba(0, 212, 255, 0.15); /* Aumentado de 0.1 a 0.15 */
+  border: 2px solid rgba(0, 212, 255, 0.4); /* Aumentado de 1px a 2px y opacidad */
+  border-radius: 12px; /* Aumentado de 10px a 12px */
+  padding: 20px; /* Aumentado de 15px a 20px */
+  margin-bottom: 25px; /* Aumentado de 20px a 25px */
+  text-align: center;
+  box-shadow: 0 4px 15px rgba(0, 212, 255, 0.2); /* Añadido para más profundidad */
+}
+
+.highlight-box strong {
+  color: var(--primary-blue);
+  font-size: clamp(1.2rem, 4vw, 1.5rem); /* Aumentado de 1rem a 1.2rem */
+  font-weight: 900; /* Aumentado de normal a 900 */
+  text-shadow: 0 0 10px rgba(0, 212, 255, 0.3); /* Añadido efecto glow */
+  letter-spacing: 0.5px; /* Añadido para mejor legibilidad */
+}
+
+/* Enhanced question text */
+.question-text {
+  font-size: clamp(1rem, 3vw, 1.2rem); /* Aumentado de 0.9rem a 1rem */
+  line-height: 1.8; /* Aumentado de 1.7 a 1.8 */
+  color: var(--text-light);
+  opacity: 0.9; /* Aumentado de 0.85 a 0.9 */
+  margin-bottom: 30px; /* Aumentado de 25px a 30px */
+  font-weight: 500; /* Aumentado de 400 a 500 */
+  letter-spacing: 0.3px;
+  text-align: left;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3); /* Añadido para mejor contraste */
+}
+
+/* Enhanced benefits list */
+.benefits-list li {
+  display: flex;
+  align-items: center;
+  gap: 15px; /* Aumentado de 12px a 15px */
+  margin-bottom: 15px; /* Aumentado de 12px a 15px */
+  font-size: clamp(0.95rem, 3vw, 1.1rem); /* Aumentado de 0.8rem a 0.95rem */
+  font-weight: 500; /* Añadido peso de fuente */
+  color: var(--text-light);
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3); /* Añadido para mejor contraste */
+}
+
+.benefits-list i {
+  color: var(--success-green);
+  font-size: 1.2rem; /* Aumentado de 1rem a 1.2rem */
+  width: 20px; /* Aumentado de 16px a 20px */
+  text-shadow: 0 0 8px rgba(0, 255, 136, 0.4); /* Añadido efecto glow */
+}
+
+/* Enhanced card numbers */
+.card-number {
+  position: absolute;
+  top: 25px; /* Aumentado de 20px a 25px */
+  right: 25px; /* Aumentado de 20px a 25px */
+  font-size: clamp(2.5rem, 8vw, 4rem); /* Aumentado de 2rem a 2.5rem */
+  font-weight: 900;
+  color: rgba(0, 212, 255, 0.25); /* Aumentado opacidad de 0.2 a 0.25 */
+  text-shadow: 0 0 20px rgba(0, 212, 255, 0.3); /* Añadido efecto glow */
+}
+
+/* Enhanced card icons */
+.card-icon {
+  width: clamp(60px, 12vw, 80px); /* Aumentado de 50px a 60px */
+  height: clamp(60px, 12vw, 80px); /* Aumentado de 50px a 60px */
+  background: var(--gradient-primary);
+  border-radius: 20px; /* Aumentado de 18px a 20px */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: clamp(1.5rem, 4vw, 2rem); /* Aumentado de 1.3rem a 1.5rem */
+  color: white;
+  margin-bottom: 30px; /* Aumentado de 25px a 30px */
+  box-shadow: 0 20px 40px rgba(0, 212, 255, 0.4); /* Aumentado sombra */
+  border: 2px solid rgba(255, 255, 255, 0.2); /* Añadido borde */
+}
+
+/* Enhanced hover effects */
+.question-card:hover .highlight-box {
+  background: rgba(0, 212, 255, 0.2); /* Más prominente en hover */
+  border-color: rgba(0, 212, 255, 0.6);
+  transform: scale(1.02); /* Añadido efecto de escala */
+}
+
+.question-card:hover .card-icon {
+  transform: scale(1.1); /* Añadido efecto de escala */
+  box-shadow: 0 25px 50px rgba(0, 212, 255, 0.5);
+}
+
+.question-card:hover h4 {
+  color: var(--primary-blue); /* Cambio de color en hover */
+  transform: translateY(-2px); /* Sutil movimiento */
+}
+
+/* Responsive enhancements for mobile */
+@media (max-width: 768px) {
+  .question-card {
+    padding: clamp(30px, 7vw, 45px) clamp(25px, 6vw, 35px); /* Aumentado padding */
+  }
+
+  .question-card h4 {
+    font-size: clamp(1.3rem, 5vw, 1.6rem);
+    margin-bottom: 20px;
+  }
+
+  .highlight-box {
+    padding: 18px;
+    margin-bottom: 20px;
+  }
+
+  .highlight-box strong {
+    font-size: clamp(1.1rem, 4.5vw, 1.3rem);
+  }
+
+  .question-text {
+    font-size: clamp(0.95rem, 3.5vw, 1.1rem);
+    margin-bottom: 25px;
+  }
+
+  .benefits-list li {
+    font-size: clamp(0.9rem, 3.2vw, 1rem);
+    margin-bottom: 12px;
+  }
+}
+
+@media (max-width: 480px) {
+  .card-number {
+    font-size: clamp(2rem, 6vw, 3rem);
+    top: 20px;
+    right: 20px;
+  }
+
+  .card-icon {
+    width: clamp(55px, 10vw, 70px);
+    height: clamp(55px, 10vw, 70px);
+    font-size: clamp(1.3rem, 3.5vw, 1.7rem);
+    margin-bottom: 25px;
+  }
+
+  .question-card h4 {
+    font-size: clamp(1.2rem, 4.5vw, 1.5rem);
+  }
+
+  .highlight-box strong {
+    font-size: clamp(1rem, 4vw, 1.2rem);
   }
 }
