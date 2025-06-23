@@ -1,6 +1,6 @@
 // Configuration
 const ZOOM_LINK = "https://us02web.zoom.us/webinar/register/WN_bA6j5cemSfquew66LWKDmg#/registration" // Replace with your actual Zoom link
-const PDF_PATH = "Inversión.pdf" // Replace with your actual PDF path
+const PDF_PATH = "Inversión-Florida.pdf" // Replace with your actual PDF path
 
 // Countdown functionality with CORRECTED 2025 date
 function initializeCountdown() {
@@ -242,7 +242,7 @@ function downloadPDF() {
   // Create download link
   const link = document.createElement("a")
   link.href = PDF_PATH
-  link.download = "Inversión.pdf" // Ensure the file name is correct
+  link.download = "Inversión-Florida.pdf" // Ensure the file name is correct
   document.body.appendChild(link)
   link.click()
   document.body.removeChild(link)
