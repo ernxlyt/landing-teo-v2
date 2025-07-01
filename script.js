@@ -1,5 +1,5 @@
 // Configuration
-const ZOOM_LINK = "https://us02web.zoom.us/webinar/register/WN_bA6j5cemSfquew66LWKDmg#/registration" // Replace with your actual Zoom link
+const ZOOM_LINK = "https://us06web.zoom.us/meeting/register/7-uos3chQISLdAPNrBC5UQ" // Replace with your actual Zoom link
 const PDF_PATH = "Inversión-Florida.pdf" // Replace with your actual PDF path
 
 // Countdown functionality with CORRECTED 2025 date
@@ -248,11 +248,16 @@ function downloadPDF() {
   document.body.removeChild(link)
 }
 
-// Counter animation for stats
+// Reemplazar la función animateCounters para que ignore el 15%
 function animateCounters() {
   const counters = document.querySelectorAll(".counter")
 
   counters.forEach((counter) => {
+    // Skip the 15% counter - keep it static
+    if (counter.textContent.includes("15%")) {
+      return
+    }
+
     const target = Number.parseInt(counter.textContent.replace(/[^\d]/g, ""))
     const increment = target / 100
     let current = 0
@@ -271,29 +276,8 @@ function animateCounters() {
   })
 }
 
-// Función para animar el contador del 15% - LIMITADO A 15%
-function animatePercentageCounter() {
-  const counter = document.getElementById("percentage-counter")
-  if (!counter) return
-
-  const target = 15 // MÁXIMO 15%
-  const duration = 2000 // 2 segundos
-  const increment = target / (duration / 16) // 60fps
-  let current = 0
-
-  const updateCounter = () => {
-    if (current < target) {
-      current += increment
-      const displayValue = Math.min(Math.floor(current), 15) // Asegurar que no pase de 15
-      counter.textContent = displayValue
-      requestAnimationFrame(updateCounter)
-    } else {
-      counter.textContent = 15 // Asegurar que termine en 15
-    }
-  }
-
-  updateCounter()
-}
+// Eliminar completamente la función del contador de porcentaje
+// function animatePercentageCounter() - REMOVED
 
 // Scroll animations
 function initScrollAnimations() {
@@ -312,10 +296,10 @@ function initScrollAnimations() {
           setTimeout(animateCounters, 500)
         }
 
-        // Trigger percentage counter animation
-        if (entry.target.classList.contains("roi-percentage")) {
-          setTimeout(animatePercentageCounter, 500)
-        }
+        // Remove the percentage counter animation call
+        // if (entry.target.classList.contains("roi-percentage")) {
+        //   setTimeout(animatePercentageCounter, 500)
+        // }
 
         // Stagger animation for multiple items
         if (entry.target.classList.contains("stagger-item")) {
@@ -330,9 +314,9 @@ function initScrollAnimations() {
     })
   }, observerOptions)
 
-  // Observe all animated elements including roi-percentage
+  // Observe all animated elements but remove roi-percentage
   const animatedElements = document.querySelectorAll(
-    ".reveal-fade, .reveal-left, .reveal-right, .reveal-scale, .stagger-item, .roi-percentage",
+    ".reveal-fade, .reveal-left, .reveal-right, .reveal-scale, .stagger-item",
   )
   animatedElements.forEach((el) => observer.observe(el))
 }
