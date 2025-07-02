@@ -1,6 +1,6 @@
 // Configuration
 const ZOOM_LINK = "https://us06web.zoom.us/meeting/register/7-uos3chQISLdAPNrBC5UQ" // Replace with your actual Zoom link
-const PDF_PATH = "Inversión-Florida.pdf" // Replace with your actual PDF path
+const PDF_PATH = "Inversion-Florida.pdf" // Cambiado a nombre sin tilde
 
 // Countdown functionality with CORRECTED 2025 date
 function initializeCountdown() {
@@ -242,7 +242,7 @@ function downloadPDF() {
   // Create download link
   const link = document.createElement("a")
   link.href = PDF_PATH
-  link.download = "Inversión-Florida.pdf" // Ensure the file name is correct
+  link.download = "Inversion-Florida.pdf" // Cambiado a nombre sin tilde
   document.body.appendChild(link)
   link.click()
   document.body.removeChild(link)
